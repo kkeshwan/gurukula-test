@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Gurukula Tests">
+   <parameter name="appUrl" value="http://localhost:8080/" />
+   <parameter name="username" value="admin" />
+   <parameter name="password" value="admin" />
+   <parameter name="password2" value="incorrect" />
+   <parameter name="usernamenew" value="usernew" />
+   <parameter name="emailnew" value="usernew@gmail.com" />
+   <parameter name="passwordnew" value="newuser123" />
+   <parameter name="branchName" value="TestBranch"/>
+   <parameter name="staffName" value="TestStaff"/>
+   <parameter name="branchCode" value="123"/>
+   <parameter name="newSTaffBrannch" value="newStaffBranch"/>
+   <parameter name="validEmail" value="admin@localhost"/>
+   <parameter name="notvalidEmail" value="admin@gmail"/>
+  <test name="FVT">
+    <classes>
+    <class name="gurukulaTest.FVTests">
+        <methods>
+              <include name="loginToApp"/>
+              <include name="validateUserLoggedIn"/>
+              <include name="validateUserNotLoggedIn"/>
+              <include name="registerUser"/>
+              <include name="createBranch"/>
+              <include name="viewBranch"/>
+              <include name="editBranch"/>
+              <include name="deleteBranch"/>
+              <include name="createStaff"/>
+              <include name="querybranch"/> 
+              <include name="viewStaffCreated"/>
+              <include name="editStaff"/>
+              <include name="deleteStaff"/>
+              <include name="queryStaff"/>
+             <include name="validateInputBranchName"/>
+             <include name="validateInputBranchCode"/>
+             <include name="validateInputNodeName"/>
+             <include name="forgetPswdValidMail"/>
+             <include name="forgetPswdNotValidMail"/>
+             <include name="changeAccountPaswd"/>
+        </methods>
+      </class> 
+    </classes>
+  </test> 
+</suite> 
